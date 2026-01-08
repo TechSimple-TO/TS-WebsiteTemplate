@@ -12,7 +12,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Brand.scss';
-import logo from './assets/logo.png';
+import logo from './assets/placeholder-logo.svg';
 
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -38,8 +38,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container header-inner">
           {/* Brand "home" link.
              Using <Link> avoids a full page reload compared to <a href="/">. */}
-          <Link className="brand" to="/" aria-label="TechSimple-TO home">
-            <img src={logo} alt="TechSimple-TO" />
+          <Link className="brand" to="/" aria-label="Brand home">
+            <img src={logo} alt="Brand logo" />
           </Link>
 
           {/* Mobile menu toggle (visible at small widths via CSS) */}
@@ -77,9 +77,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Footer with a simple contact line */}
       <footer className="site-footer">
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} TechSimple-TO. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Your Brand. All rights reserved.</p>
           <p>
-            Contact: <a href="mailto:admin@techsimple-to.ca">admin@techsimple-to.ca</a>
+            Contact: <a href="mailto:hello@example.com">hello@example.com</a>
           </p>
         </div>
       </footer>

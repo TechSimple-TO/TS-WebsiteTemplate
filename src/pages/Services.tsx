@@ -14,12 +14,7 @@ import { Link } from 'react-router-dom';
 import styles from './Services.module.scss';
 
 // Import images (Vite will optimize/hash these)
-import servicePc from '../assets/service-pc.jpg';
-import serviceSupport from '../assets/service-support.jpg';
-import serviceData from '../assets/service-data.jpg';
-import serviceAdmin from '../assets/service-admin.jpg';
-import serviceWebsite from '../assets/service-website.jpg';
-import serviceRepair from '../assets/service-repair.jpg';
+import placeholderImage from '../assets/placeholder-image.svg';
 
 type Service = {
   title: string;
@@ -31,87 +26,87 @@ type Service = {
 
 const services: Service[] = [
   {
-    title: 'Custom PC Builds',
+    title: 'Service Category One',
     description:
-      'Expertly designed systems for gaming, creative work, or business. We handle parts selection, assembly, tuning, and testing.',
-    img: servicePc,
+      'Short summary of your first service. Focus on what clients achieve after working with you.',
+    img: placeholderImage,
     details:
-      'From airflow and thermals to workload-tuned parts, we design, assemble, and stress-test PCs that match your budget and goals—no upsell, just results.',
+      'Use this expanded panel to add more detail, scope, and typical outcomes for this service.',
     examples: [
-      'Gaming rigs with reliable 144+ FPS targets',
-      'Creator builds for Adobe/DaVinci/Blender',
-      'Small-business workstations and quiet office PCs',
-      'Parts sourcing, BIOS tuning, cable management',
+      'Example deliverable or result',
+      'Suggested timeline or engagement format',
+      'Tools, platforms, or materials involved',
+      'Optional add-ons or related services',
     ],
   },
   {
-    title: 'Tech Support (24/7)',
+    title: 'Service Category Two',
     description:
-      'Remote or on-site help for urgent issues, performance problems, malware cleanup, device setup, and more—anytime you need it.',
-    img: serviceSupport,
+      'A clear, specific description for the second service you provide.',
+    img: placeholderImage,
     details:
-      'Fast, plain‑English support by phone, remote, or on‑site. We triage and resolve issues without the jargon or runaround.',
+      'Add more context here, including who this service is best for and typical results.',
     examples: [
-      'Malware cleanup and performance tuning',
-      'Printer/Wi‑Fi/device setup and troubleshooting',
-      'Email, accounts, and permissions sorted out',
-      'Proactive checkups to prevent repeat problems',
+      'Common pain point you solve',
+      'Typical deliverable',
+      'Optional maintenance or retainer',
+      'Follow-up support or handoff',
     ],
   },
   {
-    title: 'Data & Migration',
+    title: 'Service Category Three',
     description:
-      'Move to a new machine with confidence. Backups, transfers, and data integrity checks so nothing is lost in the shuffle.',
-    img: serviceData,
+      'One or two lines that explain the value of this offering.',
+    img: placeholderImage,
     details:
-      'We plan and verify migrations so your files, apps, and settings are exactly where you need them on day one—safely backed up along the way.',
+      'Use this space for deeper detail, scope boundaries, and any assumptions.',
     examples: [
-      'Full PC‑to‑PC data transfer and validation',
-      'Cloud drive consolidation (Drive, OneDrive, iCloud)',
-      'Backup strategy with versioning and restore tests',
-      'Email/Outlook moves with rules and signatures',
+      'Setup and discovery',
+      'Execution and delivery',
+      'Documentation or training',
+      'Post-launch check-in',
     ],
   },
   {
-    title: 'Admin Automation',
+    title: 'Service Category Four',
     description:
-      'Streamline repetitive work with spreadsheets, scripts, and lightweight tools tailored to your small business processes.',
-    img: serviceAdmin,
+      'Describe this service in plain language and define the main outcome.',
+    img: placeholderImage,
     details:
-      'We turn your recurring admin tasks into simple, reliable workflows—spreadsheets, scripts, and small tools that save hours every week.',
+      'Explain how you deliver this service and what clients can expect.',
     examples: [
-      'Spreadsheet templates with error‑proof formulas',
-      'Bulk invoice/PO generators and CSV imports',
-      'Data clean‑up and simple dashboards',
-      'Email/report automation on a schedule',
+      'Kickoff and requirements',
+      'Design or build phase',
+      'Delivery timeline',
+      'Optional support plan',
     ],
   },
   {
-    title: 'Web Development & Modernization',
+    title: 'Service Category Five',
     description:
-      'Design and rebuild modern sites, streamline small-business workflows (booking, invoicing, analytics), and migrate off legacy tools with minimal downtime.',
-    img: serviceWebsite,
+      'Summarize this service in one sentence that speaks to the client.',
+    img: placeholderImage,
     details:
-      'Modern, fast websites with the essentials built‑in—SEO basics, analytics, contact/booking, and a maintainable setup you actually control.',
+      'Use the details panel to add scope and deliverables for this service.',
     examples: [
-      'Rebuild legacy sites with mobile‑first layouts',
-      'Online booking/contact forms wired to email/CRMs',
-      'Lightweight sites with great Core Web Vitals',
-      'Migration off dead plugins and fragile stacks',
+      'Key deliverable one',
+      'Key deliverable two',
+      'Stakeholder handoff',
+      'Maintenance or ongoing support',
     ],
   },
   {
-    title: 'Hardware Repairs',
+    title: 'Service Category Six',
     description:
-      'Diagnostics and repairs for laptops/desktops: SSD/RAM upgrades, thermal servicing, screen/keyboard/battery replacements, deep cleaning, and tune‑ups.',
-    img: serviceRepair,
+      'Add a final service or remove this card if you need fewer offerings.',
+    img: placeholderImage,
     details:
-      'Clear diagnosis and upfront quotes—repairs and upgrades done right, with parts we trust and careful attention to longevity and thermals.',
+      'Optional detail paragraph describing what is included or excluded.',
     examples: [
-      'SSD/RAM upgrades and OS refreshes',
-      'Thermal paste and deep clean for overheating',
-      'Laptop screens, keyboards, and battery swaps',
-      'No‑boot recovery and data preservation',
+      'Example bullet point',
+      'Example bullet point',
+      'Example bullet point',
+      'Example bullet point',
     ],
   },
 ];
@@ -134,8 +129,8 @@ const Services: React.FC = () => {
     <div className={styles.intro}>
       <h2 id="services-title" className={styles.title}>Our Services</h2>
       <p className={styles.lead}>
-        Practical, no-nonsense solutions with clear outcomes and honest pricing. Pick what you need
-        or ask us for a recommendation—we’ll right-size it.
+        Use this page to describe each service in more detail. Keep descriptions concise and
+        focus on outcomes.
       </p>
     </div>
 
@@ -190,12 +185,12 @@ const Services: React.FC = () => {
 
     {/* Why work with us */}
     <div className={styles.whyBox} aria-labelledby="why-title">
-      <h3 id="why-title" className={styles.whyTitle}>Why Work With TechSimple-TO</h3>
+      <h3 id="why-title" className={styles.whyTitle}>Why Work With Us</h3>
       <ul className={styles.bullets}>
-        <li><strong>Clarity first:</strong> options explained in plain language—no jargon.</li>
-        <li><strong>Speed when it counts:</strong> quick response and minimal downtime.</li>
-        <li><strong>Right-sized solutions:</strong> we propose what you actually need.</li>
-        <li><strong>Transparent pricing:</strong> clear quotes before any work begins.</li>
+        <li><strong>Clear scope:</strong> define deliverables and expectations up front.</li>
+        <li><strong>Reliable timelines:</strong> set milestones and keep stakeholders informed.</li>
+        <li><strong>Flexible options:</strong> choose the level of support that fits your needs.</li>
+        <li><strong>Transparent pricing:</strong> explain costs before work begins.</li>
       </ul>
     </div>
 
@@ -203,7 +198,7 @@ const Services: React.FC = () => {
     <section className={styles.ctaBand} aria-labelledby="services-cta">
       <div className={styles.ctaBandInner}>
         <h2 id="services-cta" className={styles.h2w}>Not sure where to start?</h2>
-        <p className={styles.hintw}>Tell us your goals—we’ll recommend a plan in plain English.</p>
+        <p className={styles.hintw}>Reach out and describe your goals so we can suggest next steps.</p>
         <div className={styles.sectionCtaRow}>
           <Link className="btn btn--secondary" to="/contact">Contact Us</Link>
         </div>

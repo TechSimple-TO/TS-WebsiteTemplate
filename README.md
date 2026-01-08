@@ -1,6 +1,6 @@
-# TechSimple-TO Website (React + Vite)
+# Website Template (React + Vite)
 
-This repository contains the source code for my website. It’s a modern React + TypeScript + Vite app that others can use as a starting point to build a clean, fast website for their small business.
+This repository contains a modern React + TypeScript + Vite app that you can use as a starting point for a clean, fast small-business website.
 
 ## Quick Start
 
@@ -33,28 +33,7 @@ Notes:
 
 ## Contributing / Reuse
 
-Feel free to fork this repo and adapt it for your own small business site. PRs that improve clarity, accessibility, performance, or developer ergonomics are welcome.
-
-## Git Worktrees (multi-branch setup)
-
-To avoid accidental cross-branch edits, the repo uses Git worktrees for active branches.
-
-- Locations
-  - master: C:\Users\Nick\techsimple-client-vite
-  - deploy: C:\Users\Nick\_worktrees\deploy
-  - experiment: C:\Users\Nick\_worktrees\experiment
-
-- Common commands
-  - List worktrees: `git worktree list`
-  - Update current worktree: `git pull`
-  - Commit and push: `git commit -m "..." && git push`
-  - Remove a worktree (run from the main repo folder):
-    - `git worktree remove C:\Users\Nick\_worktrees\experiment`
-
-- Notes
-  - Each folder is a full checkout locked to its branch.
-  - You can open each in its own editor window; run separate dev servers.
-  - The `deploy` branch includes `.gitattributes` to keep `server/` removed on merges.
+Feel free to fork this repo and adapt it for your own site. PRs that improve clarity, accessibility, performance, or developer ergonomics are welcome.
 
 ---
 
