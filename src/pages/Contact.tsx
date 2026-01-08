@@ -94,10 +94,10 @@ const Contact: React.FC = () => {
       {/* Left: Form card */}
       <div className={styles.formCard}>
         <h2 id="contact-title" className={styles.title}>
-          Contact TechSimple-TO
+          Contact Us
         </h2>
         <p className={styles.lead}>
-          Have a question or need a hand? Send a note and we’ll get back quickly.
+          Use this form to collect inquiries, requests, or project details.
         </p>
 
         <form onSubmit={onSubmit} noValidate aria-describedby="form-status" className={styles.form}>
@@ -111,7 +111,7 @@ const Contact: React.FC = () => {
               value={form.name}
               onChange={onChange}
               onBlur={onBlur}
-              placeholder="Jane Doe"
+              placeholder="First Last"
               autoComplete="name"
               required
             />
@@ -131,7 +131,7 @@ const Contact: React.FC = () => {
               value={form.email}
               onChange={onChange}
               onBlur={onBlur}
-              placeholder="you@company.com"
+              placeholder="you@example.com"
               autoComplete="email"
               inputMode="email"
               autoCapitalize="none"
@@ -152,7 +152,7 @@ const Contact: React.FC = () => {
               value={form.title}
               onChange={onChange}
               onBlur={onBlur}
-              placeholder="Short summary (e.g., PC build consultation)"
+              placeholder="Short summary (e.g., Website redesign request)"
               required
             />
             {touched.title && errors.title && (
@@ -170,7 +170,7 @@ const Contact: React.FC = () => {
               value={form.message}
               onChange={onChange}
               onBlur={onBlur}
-              placeholder="Tell us a bit about what you need…"
+              placeholder="Tell us a bit about what you need."
               required
             />
             {touched.message && errors.message && (
@@ -201,20 +201,20 @@ const Contact: React.FC = () => {
         <h3 className={styles.infoTitle}>Prefer email?</h3>
         <p>
           Reach us at{' '}
-          <a href="mailto:admin@techsimple-to.ca" className={styles.link}>
-            admin@techsimple-to.ca
+          <a href="mailto:hello@example.com" className={styles.link}>
+            hello@example.com
           </a>
         </p>
 
         <h4 className={styles.infoSub}>Hours</h4>
-        <p>Mon–Fri: 9:00–18:00 • 24/7 support for urgent issues</p>
+        <p>Mon-Fri: 9:00-17:00</p>
 
         <h4 className={styles.infoSub}>Service Area</h4>
-        <p>Toronto (GTA) &amp; Remote across Canada</p>
+        <p>City, Region or Remote</p>
 
         <div className={styles.noteBox}>
           <p>
-            Tip: For PC builds, include your target apps/games and budget—we’ll recommend a parts list.
+            Tip: Ask for the details you need to scope a project quickly.
           </p>
         </div>
       </aside>

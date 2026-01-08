@@ -19,6 +19,142 @@
 /* Reusable CTA row; buttons use global .btn classes from Brand.scss */
 .sectionCtaRow { margin-top: 1rem; display: flex; gap: .6rem; flex-wrap: wrap; }
 
+/* Palette guidance */
+.paletteGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.paletteCard {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  padding: 1rem;
+}
+
+.swatch {
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  margin-bottom: .75rem;
+}
+.swatchPrimary { background: #1f1f1f; }
+.swatchSecondary { background: #6a6a6a; }
+.swatchLight { background: #f1f1f1; }
+.swatchDark { background: #2b2b2b; }
+.swatchAccent { background: #bdbdbd; }
+
+.paletteNote {
+  margin-top: .75rem;
+  font-size: .95rem;
+}
+
+.paletteExample {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #dedede;
+  background: #f6f6f6;
+  display: grid;
+  gap: 1rem;
+}
+
+.exampleSwatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: .75rem;
+}
+
+.exampleSwatch {
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,.12);
+}
+
+.examplePrimarySwatch { background: #2a6fdb; }
+.exampleSecondarySwatch { background: #00a08a; }
+.exampleLightSwatch { background: #f3f5f7; }
+.exampleDarkSwatch { background: #1f1f1f; }
+
+.exampleLabel {
+  margin: .4rem 0 0;
+  font-size: .85rem;
+  color: #444;
+}
+
+.exampleCard {
+  background: #f3f5f7;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #1f1f1f;
+  border: 1px solid rgba(0,0,0,.08);
+  display: grid;
+  gap: .5rem;
+}
+
+.exampleHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exampleBadge {
+  background: #00a08a;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .2rem .55rem;
+  border-radius: 999px;
+}
+
+.exampleLink {
+  color: #2a6fdb;
+  font-weight: 700;
+}
+
+.exampleTitle {
+  margin: .25rem 0 0;
+  color: #1f1f1f;
+}
+
+.exampleBody {
+  margin: 0;
+  color: #333;
+}
+
+.exampleActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: .25rem;
+}
+
+.examplePrimary,
+.exampleSecondary {
+  border-radius: 8px;
+  padding: .5rem .85rem;
+  font-weight: 700;
+  font-size: .95rem;
+  border: 1px solid transparent;
+}
+
+.examplePrimary {
+  background: #2a6fdb;
+  color: #fff;
+}
+
+.exampleSecondary {
+  background: transparent;
+  color: #2a6fdb;
+  border-color: #2a6fdb;
+}
+
 /* Card grid used for services and testimonials */
 .cardGrid {
   display: grid;
@@ -108,7 +244,7 @@
 /* CTA band */
 .ctaBand {
   margin-top: 2rem;
-  background: linear-gradient(90deg, var(--color-blue), #6f8fff);
+  background: linear-gradient(90deg, var(--color-blue), #4b4b4b);
   color: #fff;
   border-radius: 10px;
 }

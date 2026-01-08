@@ -10,31 +10,26 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.scss';
 
-import servicePc from '../assets/service-pc.jpg';
-import serviceSupport from '../assets/service-support.jpg';
-import serviceData from '../assets/service-data.jpg';
-import serviceAdmin from '../assets/service-admin.jpg';
-import serviceWebsite from '../assets/service-website.jpg';
-import serviceRepair from '../assets/service-repair.jpg';
+import placeholderImage from '../assets/placeholder-image.svg';
 
 /** Stronger typing helps prevent accidental shape changes later. */
 type Testimonial = { name: string; quote: string };
 
 const testimonials: Testimonial[] = [
   {
-    name: 'Charlie G.',
+    name: 'Client One',
     quote:
-      'I came to a roadblock with my business payroll. I received multiple unreasonable quotes from others (who didn’t solve my problem). Nick got my business back up and running within 24 hours at half the price. I would rate higher than 5 stars if I could!',
+      'This is a sample testimonial. Swap this with a short, specific quote that highlights a real result.',
   },
   {
-    name: 'Ethan P.',
+    name: 'Client Two',
     quote:
-      'As someone who was stressing out that their laptop wouldn’t work by tomorrow, not only was it a true hidden gem to find a service that offered tech support 24/7, but to also speak with someone like Nick who is incredibly helpful, knowledgeable and knows how to turn any situation into a positive. I could not recommend TechSimple-TO enough!',
+      'Use these quotes to build trust. Keep them concise and focused on outcomes.',
   },
   {
-    name: 'Jack W.',
+    name: 'Client Three',
     quote:
-      'This company was exactly what I needed. They designed and assembled an incredibly powerful computer for me complete with remote rec support as well as helping my to generate spreadsheets and tech solutions specific to my business. Can’t say enough good things about this company!',
+      'Another placeholder quote goes here. Replace with real feedback once available.',
   },
 ];
 
@@ -85,12 +80,88 @@ const Home: React.FC = () => {
     <section className={styles.wrapper} aria-labelledby="home-title">
       <div className={styles.intro}>
         <h2 id="home-title" className={styles.title}>
-          Welcome to TechSimple-TO
+          Welcome to Your Website
         </h2>
         <p className={styles.lead}>
-          We specialize in tech support, PC builds, and administrative solutions tailored for small
-          businesses. Let us simplify technology for you.
+          This hero section is a short introduction. Replace it with a clear, one-sentence summary
+          of what your business does and who it helps.
         </p>
+      </div>
+    </section>
+
+    {/* Palette guidance */}
+    <section className={styles.section} aria-labelledby="palette-title">
+      <div className={styles.card}>
+        <h2 id="palette-title" className={styles.sectionTitle}>Choose Your Color Palette</h2>
+        <p className={styles.sectionLead}>
+          Pick 4 core colors to keep the site consistent. Add an optional highlight color if you
+          want a bit more contrast.
+        </p>
+        <ul className={styles.paletteGrid} role="list">
+          <li className={styles.paletteCard}>
+            <span className={`${styles.swatch} ${styles.swatchPrimary}`} aria-hidden="true" />
+            <h3 className={styles.cardHeading}>Primary accent</h3>
+            <p>Primary buttons, key headings, and the active navigation state.</p>
+          </li>
+          <li className={styles.paletteCard}>
+            <span className={`${styles.swatch} ${styles.swatchSecondary}`} aria-hidden="true" />
+            <h3 className={styles.cardHeading}>Secondary accent</h3>
+            <p>Secondary buttons, borders, dividers, and subtle emphasis.</p>
+          </li>
+          <li className={styles.paletteCard}>
+            <span className={`${styles.swatch} ${styles.swatchLight}`} aria-hidden="true" />
+            <h3 className={styles.cardHeading}>Light neutral</h3>
+            <p>Page background, card surfaces, and low-contrast panels.</p>
+          </li>
+          <li className={styles.paletteCard}>
+            <span className={`${styles.swatch} ${styles.swatchDark}`} aria-hidden="true" />
+            <h3 className={styles.cardHeading}>Dark neutral</h3>
+            <p>Body text, icons, and any high-contrast dividers.</p>
+          </li>
+          <li className={styles.paletteCard}>
+            <span className={`${styles.swatch} ${styles.swatchAccent}`} aria-hidden="true" />
+            <h3 className={styles.cardHeading}>Optional highlight</h3>
+            <p>Badges, callouts, and small UI flourishes.</p>
+          </li>
+        </ul>
+        <p className={styles.paletteNote}>
+          This template ships with grayscale values so you can swap in your own palette quickly.
+        </p>
+        <div className={styles.paletteExample} role="group" aria-label="Example components using four brand colors">
+          <div className={styles.exampleSwatches}>
+            <div>
+              <span className={`${styles.swatch} ${styles.exampleSwatch} ${styles.examplePrimarySwatch}`} aria-hidden="true" />
+              <p className={styles.exampleLabel}>Primary accent</p>
+            </div>
+            <div>
+              <span className={`${styles.swatch} ${styles.exampleSwatch} ${styles.exampleSecondarySwatch}`} aria-hidden="true" />
+              <p className={styles.exampleLabel}>Secondary accent</p>
+            </div>
+            <div>
+              <span className={`${styles.swatch} ${styles.exampleSwatch} ${styles.exampleLightSwatch}`} aria-hidden="true" />
+              <p className={styles.exampleLabel}>Light neutral</p>
+            </div>
+            <div>
+              <span className={`${styles.swatch} ${styles.exampleSwatch} ${styles.exampleDarkSwatch}`} aria-hidden="true" />
+              <p className={styles.exampleLabel}>Dark neutral</p>
+            </div>
+          </div>
+          <div className={styles.exampleCard}>
+            <div className={styles.exampleHeader}>
+              <span className={styles.exampleBadge}>Highlight badge</span>
+              <span className={styles.exampleLink}>Example link</span>
+            </div>
+            <h3 className={styles.exampleTitle}>Example card title</h3>
+            <p className={styles.exampleBody}>
+              This mock card shows how four brand colors can map to buttons, badges, text, and
+              background surfaces.
+            </p>
+            <div className={styles.exampleActions}>
+              <button className={styles.examplePrimary} type="button">Primary action</button>
+              <button className={styles.exampleSecondary} type="button">Secondary action</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -99,44 +170,44 @@ const Home: React.FC = () => {
       <div className={styles.card}>
         <h2 id="services-title" className={styles.sectionTitle}>What We Do</h2>
         <p className={styles.sectionLead}>
-          Practical help with clear outcomes—no jargon, no runaround.
+          This section lists your core services. Keep it brief and scannable.
         </p>
       
 
         <ul className={styles.cardGrid} role="list">
           <li className={styles.card}>
-            <img className={styles.cardImg} src={servicePc} alt="Custom PC build" loading="lazy" decoding="async" />
-            <h3 className={styles.cardHeading}>Custom PC Builds</h3>
-            <p>Design, parts selection, assembly, and tuning for your workflow and budget.</p>
+            <img className={styles.cardImg} src={placeholderImage} alt="Service placeholder" loading="lazy" decoding="async" />
+            <h3 className={styles.cardHeading}>Service Category One</h3>
+            <p>Short description of a key offering. Focus on outcomes, not features.</p>
           </li>
           <li className={styles.card}>
-            <img className={styles.cardImg} src={serviceSupport} alt="24/7 support" loading="lazy" decoding="async" />
-            <h3 className={styles.cardHeading}>24/7 Tech Support</h3>
-            <p>Urgent fixes, remote assistance, and proactive maintenance when you need it.</p>
+            <img className={styles.cardImg} src={placeholderImage} alt="Service placeholder" loading="lazy" decoding="async" />
+            <h3 className={styles.cardHeading}>Service Category Two</h3>
+            <p>Describe a second service. Keep the language straightforward and friendly.</p>
           </li>
           <li className={styles.card}>
-            <img className={styles.cardImg} src={serviceData} alt="Data backup and migration" loading="lazy" decoding="async" />
-            <h3 className={styles.cardHeading}>Data &amp; Migration</h3>
-            <p>Backups, transfers, and setup that keep your files safe and accessible.</p>
+            <img className={styles.cardImg} src={placeholderImage} alt="Service placeholder" loading="lazy" decoding="async" />
+            <h3 className={styles.cardHeading}>Service Category Three</h3>
+            <p>One sentence explaining who this is for and why it matters.</p>
           </li>
           <li className={styles.card}>
-            <img className={styles.cardImg} src={serviceAdmin} alt="Admin automation" loading="lazy" decoding="async" />
-            <h3 className={styles.cardHeading}>Admin Automation</h3>
-            <p>Spreadsheets, scripts, and tools tailored to your business processes.</p>
+            <img className={styles.cardImg} src={placeholderImage} alt="Service placeholder" loading="lazy" decoding="async" />
+            <h3 className={styles.cardHeading}>Service Category Four</h3>
+            <p>Add another offering or remove cards you do not need.</p>
           </li>
           <li className={styles.card}>
-            <img className={styles.cardImg} src={serviceWebsite} alt="Web development and modernization" loading="lazy" decoding="async" />
-            <h3 className={styles.cardHeading}>Web Development &amp; Modernization</h3>
-            <p>Modern sites and small‑business workflows: booking, invoicing, analytics, migrations.</p>
+            <img className={styles.cardImg} src={placeholderImage} alt="Service placeholder" loading="lazy" decoding="async" />
+            <h3 className={styles.cardHeading}>Service Category Five</h3>
+            <p>Use this space to highlight a differentiator or specialty.</p>
           </li>
           <li className={styles.card}>
-            <img className={styles.cardImg} src={serviceRepair} alt="Hardware repairs" loading="lazy" decoding="async" />
-            <h3 className={styles.cardHeading}>Hardware Repairs</h3>
-            <p>Diagnostics, upgrades, and fixes: SSD/RAM, thermal service, screens, batteries, cleaning.</p>
+            <img className={styles.cardImg} src={placeholderImage} alt="Service placeholder" loading="lazy" decoding="async" />
+            <h3 className={styles.cardHeading}>Service Category Six</h3>
+            <p>Swap in a real service or delete this card for a shorter list.</p>
           </li>
         </ul>
         <div className={styles.sectionCtaRow} style={{ justifyContent: 'center' }}>
-          <Link className="btn btn--primary" to="/services">Our Services</Link>
+          <Link className="btn btn--primary" to="/services">View Services</Link>
         </div>
       </div>
     </section>
@@ -149,22 +220,22 @@ const Home: React.FC = () => {
           <li className={styles.step}>
             <span className={styles.stepNum}>1</span>
             <div>
-              <h3 className={styles.stepTitle}>Chat</h3>
-              <p>Tell us your goals, constraints, and timeline. We’ll recommend a path.</p>
+              <h3 className={styles.stepTitle}>Discover</h3>
+              <p>Share your goals, timeline, and constraints so we can scope the work.</p>
             </div>
           </li>
           <li className={styles.step}>
             <span className={styles.stepNum}>2</span>
             <div>
-              <h3 className={styles.stepTitle}>Build</h3>
-              <p>We design and assemble your solution—hardware, software, or both.</p>
+              <h3 className={styles.stepTitle}>Design</h3>
+              <p>We outline the plan, deliverables, and milestones for approval.</p>
             </div>
           </li>
           <li className={styles.step}>
             <span className={styles.stepNum}>3</span>
             <div>
-              <h3 className={styles.stepTitle}>Support</h3>
-              <p>We make sure everything runs smoothly and stay on-call if you need us.</p>
+              <h3 className={styles.stepTitle}>Deliver</h3>
+              <p>We execute the work and provide any follow-up support you need.</p>
             </div>
           </li>
         </ol>
@@ -174,7 +245,7 @@ const Home: React.FC = () => {
     {/* CTA band: high-contrast nudge before testimonials */}
     <section className={styles.ctaBand} aria-labelledby="cta-title">
       <div className={styles.ctaBandInner}>
-        <h2 className={styles.h2w} id="cta-title">Ready to make tech simple?</h2>
+        <h2 className={styles.h2w} id="cta-title">Ready to get started?</h2>
         <div className={styles.sectionCtaRow}>
           <Link className="btn btn--secondary" to="/contact">Contact Us</Link>
         </div>
@@ -184,8 +255,8 @@ const Home: React.FC = () => {
     {/* Testimonials: semantic list for improved screen reader navigation */}
     <section className={styles.testimonials} aria-labelledby="testimonials-title">
       <div className={styles.card}>
-        <h2 id="testimonials-title">What Our Clients Say</h2>
-        <p>We pride ourselves on delivering exceptional service. Here’s what our clients have to say:</p>
+        <h2 id="testimonials-title">Testimonials</h2>
+        <p>Add a few short testimonials to build credibility and social proof.</p>
       
 
         <ul className={styles.cardGrid}>
